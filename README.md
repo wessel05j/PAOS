@@ -14,4 +14,4 @@ Instead of being a single chatbot or coding assistant, PAOS is intended to becom
 PAOS is in the planning and architecture phase. The first documentation set for the agreed foundation is now tracked in [`docs/README.md`](docs/README.md).
 
 ## License
-PAOS is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+PAOS is licensed under the **MIT LICENSE**.
