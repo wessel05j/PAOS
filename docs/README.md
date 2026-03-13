@@ -4,42 +4,35 @@ This directory contains the current planning baseline for PAOS. It captures the 
 
 ## Documentation Map
 
-| Area | Purpose | Status |
+| Domain | Purpose | Status |
 | --- | --- | --- |
-| [Foundation / Operating Model](foundation/operating-model.md) | CEO, COO, built-in AI identity model, and core product stance | Planned |
-| [Foundation / Role Hierarchy](foundation/role-hierarchy.md) | Fixed backbone roles, ladder, and branching rules | Planned |
-| [Foundation / Memory Model](foundation/memory-model.md) | Memory layers, logs boundary, and durable memory flow | Planned |
-| [Foundation / Session Continuity](foundation/session-continuity.md) | Context overflow behavior and structured handoff rules | Planned |
-| [Foundation / Working State Schema](foundation/working-state-schema.md) | Typed session state and handoff object design | Planned |
-| [Foundation / Memory Governance](foundation/memory-governance.md) | Memory access, commit authority, and overrides | Planned |
-| [Foundation / Memory Retention](foundation/memory-retention.md) | Superseding, archiving, purging, and retrieval behavior | Planned |
+| [Foundation](foundation/README.md) | Baseline product, system, and governance design | Planned |
+| [Foundation / Core](foundation/core/README.md) | Product stance, CEO/COO model, and AI identity | Planned |
+| [Foundation / Organization](foundation/organization/README.md) | Backbone roles, hierarchy, and company structure | Planned |
+| [Foundation / Memory](foundation/memory/README.md) | Memory, continuity, working state, governance, and retention | Planned |
+| [Foundation / Observability](foundation/observability/README.md) | Logs, audit history, and traceability rules | Planned |
+| [Foundation / Security](foundation/security/README.md) | Permission and sandbox domain for upcoming sections | In progress |
 | [Planning Status](planning-status.md) | What is done and what still needs design work | Active |
 
 ## Foundation At A Glance
 
 ```mermaid
 flowchart TD
-    CEO[CEO / User] --> COO[COO]
-    COO --> AL[Architecture Lead]
-    COO --> SL[Systems Lead]
-    COO --> OL[Operations Lead]
-    COO --> SecL[Security Lead]
-    COO --> KL[Knowledge Lead]
+    F[Foundation] --> C[Core]
+    F --> O[Organization]
+    F --> M[Memory]
+    F --> Obs[Observability]
+    F --> S[Security]
 
-    KL --> M[Memory System]
-    SecL --> P[Policy + Overrides]
-    OL --> W[Delegated Work]
-    AL --> H[Hierarchy Design]
-    SL --> F[Workspace + Tools]
+    M --> Obs
+    S --> M
+    S --> Obs
 ```
 
 ## Reading Order
-1. Start with [Operating Model](foundation/operating-model.md).
-2. Continue to [Role Hierarchy](foundation/role-hierarchy.md).
-3. Read the memory set in this order:
-   [Memory Model](foundation/memory-model.md),
-   [Session Continuity](foundation/session-continuity.md),
-   [Working State Schema](foundation/working-state-schema.md),
-   [Memory Governance](foundation/memory-governance.md),
-   [Memory Retention](foundation/memory-retention.md).
-4. Use [Planning Status](planning-status.md) to see what still needs specification before implementation starts.
+1. Start with [Foundation](foundation/README.md).
+2. Read [Operating Model](foundation/core/operating-model.md).
+3. Continue to [Role Hierarchy](foundation/organization/role-hierarchy.md).
+4. Read the memory set through [Memory](foundation/memory/README.md).
+5. Continue to [Log Model](foundation/observability/log-model.md).
+6. Use [Planning Status](planning-status.md) to see what still needs specification before implementation starts.
