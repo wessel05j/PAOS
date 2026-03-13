@@ -15,14 +15,13 @@ This file tracks which planning areas are stable enough to document and which ar
 | Memory retention | Planned | Superseding, archive behavior, and purge rules are defined. |
 | Log model | Planned | Layered hybrid logs, access rules, retention, and removal behavior are defined. |
 | Global permission model | Planned | Deny-by-default permission layers, approval flow, and role policy defaults are defined. |
+| Workspace and sandbox model | Planned | Empire root, external mounts, tool boundaries, and network sandbox rules are defined. |
 
 ## Still Needed
 
 ### Security
 
-| Section | Why It Matters |
-| --- | --- |
-| Workspace and sandbox model | Needed to define local boundaries, filesystem rules, tool execution, and internet access. |
+All currently planned security foundation sections are documented.
 
 ### Product Setup
 
@@ -59,12 +58,12 @@ flowchart LR
         MR[Memory Retention]
         LM[Log Model]
         PM[Permission Model]
+        SB[Sandbox]
     end
 
     subgraph Open["Still To Plan"]
         OB[Onboarding]
         CA[Custom Agents]
-        SB[Sandbox]
         TA[Tech Architecture]
         PA[Provider Architecture]
         UX[UI and UX]
@@ -74,4 +73,4 @@ flowchart LR
 
 ## Immediate Next Recommendation
 
-The next document to design should be the **workspace and sandbox model**. The permission framework now needs concrete filesystem, tool, and network boundary rules so the secure baseline becomes operational.
+The next document to design should be the **onboarding baseline**. The security and sandbox rules are now defined enough to shape what the CEO should configure on first launch.
