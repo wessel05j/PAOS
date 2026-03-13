@@ -10,7 +10,8 @@ This section defines the baseline structure of PAOS before implementation starts
 | [Organization](organization/README.md) | Built-in hierarchy, titles, and structure rules | Planned |
 | [Memory](memory/README.md) | Memory, continuity, working state, governance, and retention | Planned |
 | [Observability](observability/README.md) | Logs, audit history, and traceability rules | Planned |
-| [Security](security/README.md) | Permission model, sandboxing, and protection boundaries | In progress |
+| [Security](security/README.md) | Permission model, sandboxing, and protection boundaries | Planned |
+| [Product Setup](product-setup/README.md) | First-run setup and early empire configuration | Planned |
 
 ## Foundation Domains
 
@@ -21,6 +22,7 @@ flowchart LR
     M[Memory]
     Obs[Observability]
     S[Security]
+    PS[Product Setup]
 
     C --> O
     O --> M
@@ -28,6 +30,7 @@ flowchart LR
     S --> O
     S --> M
     S --> Obs
+    S --> PS
 ```
 
 ## Reading Order
@@ -36,3 +39,4 @@ flowchart LR
 3. [Memory](memory/README.md)
 4. [Observability](observability/log-model.md)
 5. [Security](security/README.md)
+6. [Product Setup](product-setup/onboarding-baseline.md)

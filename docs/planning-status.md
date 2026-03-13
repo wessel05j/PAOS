@@ -16,6 +16,7 @@ This file tracks which planning areas are stable enough to document and which ar
 | Log model | Planned | Layered hybrid logs, access rules, retention, and removal behavior are defined. |
 | Global permission model | Planned | Deny-by-default permission layers, approval flow, and role policy defaults are defined. |
 | Workspace and sandbox model | Planned | Empire root, external mounts, tool boundaries, and network sandbox rules are defined. |
+| Onboarding baseline | Planned | First-run empire setup, initial AI path, and first-entry flow are defined. |
 
 ## Still Needed
 
@@ -25,9 +26,7 @@ All currently planned security foundation sections are documented.
 
 ### Product Setup
 
-| Section | Why It Matters |
-| --- | --- |
-| Onboarding baseline | Needed to define the first-run setup flow for workspace, providers, names, and security posture. |
+All currently planned product setup foundation sections are documented.
 
 ### Empire Building
 
@@ -59,10 +58,10 @@ flowchart LR
         LM[Log Model]
         PM[Permission Model]
         SB[Sandbox]
+        OB[Onboarding]
     end
 
     subgraph Open["Still To Plan"]
-        OB[Onboarding]
         CA[Custom Agents]
         TA[Tech Architecture]
         PA[Provider Architecture]
@@ -73,4 +72,4 @@ flowchart LR
 
 ## Immediate Next Recommendation
 
-The next document to design should be the **onboarding baseline**. The security and sandbox rules are now defined enough to shape what the CEO should configure on first launch.
+The next document to design should be the **custom agent creation model**. The baseline now covers identity, memory, security, sandboxing, and onboarding, so the next product-facing gap is how the empire actually grows.
