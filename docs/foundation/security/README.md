@@ -6,8 +6,12 @@ This domain will hold the protection model for PAOS: permission inheritance, san
 
 | Document | Purpose | Status |
 | --- | --- | --- |
-| Global permission model | Empire-wide safety caps and role permission inheritance | Next |
+| [Global permission model](global-permission-model.md) | Empire-wide safety caps, role inheritance, approvals, and overrides | Planned |
 | Workspace and sandbox model | Filesystem, tool, and network boundary rules | Next |
+
+## Reading Order
+1. [Global permission model](global-permission-model.md)
+2. Workspace and sandbox model
 
 ## Security Focus
 

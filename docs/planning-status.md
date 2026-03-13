@@ -14,6 +14,7 @@ This file tracks which planning areas are stable enough to document and which ar
 | Memory governance | Planned | Read/write rules, overrides, and authority flow are defined. |
 | Memory retention | Planned | Superseding, archive behavior, and purge rules are defined. |
 | Log model | Planned | Layered hybrid logs, access rules, retention, and removal behavior are defined. |
+| Global permission model | Planned | Deny-by-default permission layers, approval flow, and role policy defaults are defined. |
 
 ## Still Needed
 
@@ -21,7 +22,6 @@ This file tracks which planning areas are stable enough to document and which ar
 
 | Section | Why It Matters |
 | --- | --- |
-| Global permission model | Needed to define inheritance from empire caps down to roles, tools, network, and external files. |
 | Workspace and sandbox model | Needed to define local boundaries, filesystem rules, tool execution, and internet access. |
 
 ### Product Setup
@@ -58,10 +58,10 @@ flowchart LR
         MG[Memory Governance]
         MR[Memory Retention]
         LM[Log Model]
+        PM[Permission Model]
     end
 
     subgraph Open["Still To Plan"]
-        PM[Permission Model]
         OB[Onboarding]
         CA[Custom Agents]
         SB[Sandbox]
@@ -74,4 +74,4 @@ flowchart LR
 
 ## Immediate Next Recommendation
 
-The next document to design should be the **global permission model**. The hierarchy, memory, and log decisions now need a system-wide permission layer that defines safety caps, role inheritance, approvals, and exceptional access.
+The next document to design should be the **workspace and sandbox model**. The permission framework now needs concrete filesystem, tool, and network boundary rules so the secure baseline becomes operational.
